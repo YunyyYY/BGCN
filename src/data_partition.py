@@ -1,4 +1,4 @@
-'''
+"""
     Copyright (C) 2019. Huawei Technologies Co., Ltd and McGill University. All rights reserved.
     This program is free software; you can redistribute it and/or modify
     it under the terms of the MIT License.
@@ -6,14 +6,14 @@
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
     MIT License for more details.
-    '''
+"""
 import numpy as np
-from src.utils_gcn import load_data
+from src.utils_gcn import load_data, load_movie
 
 
 def data_partition_random(dataset_dir, dataset_name, label_n_per_class):
     # Random data partition
-    text_set_n = 1000
+    text_set_n = 983
     val_set_n = 500
     adj, features, y_train, y_val, y_test, train_mask, val_mask, test_mask, one_hot_labels = load_data(dataset_name, dataset_dir)
 
@@ -33,7 +33,7 @@ def data_partition_random(dataset_dir, dataset_name, label_n_per_class):
 
     class_index_dict = {}
     for i in range(k):
-        class_index_dict[i] = np.where(labels == i)[0]
+        class_index_dict[i] = np.where(labels[:, i] == 1)[0]
 
     for i in range(k):
         class_index = class_index_dict[i]
@@ -64,15 +64,20 @@ def data_partition_random(dataset_dir, dataset_name, label_n_per_class):
 
 def data_partition_fix(dataset_dir, dataset_name, label_n_per_class):
     # Data partition using the official split from Kipf's original GCN
-    adj, features, y_train, y_val, y_test, train_mask, val_mask, test_mask, one_hot_labels = load_data(
-        dataset_name, dataset_dir)
+    if dataset_name == 'movie':
+        adj, features, y_train, y_val, y_test, train_mask, val_mask, test_mask, labels = load_movie(
+            dataset_name, dataset_dir)
+    else:
+        adj, features, y_train, y_val, y_test, train_mask, val_mask, test_mask, labels = load_data(
+            dataset_name, dataset_dir)
     k = len(y_train[0])
     train_set_index = np.where(train_mask == True)[0]
-    labels = one_hot_labels.argmax(axis=1)
+    # print("train_set_index", train_set_index)
     train_set_labels = labels[train_set_index]
+    # print(labels)
     train_node_index = {}
     for i in range(k):
-        train_node_index[i] = np.where(train_set_labels == i)[0]
+        train_node_index[i] = np.where(train_set_labels[:, i] == 1)[0]
 
     for i in range(k):
         hide_index = train_node_index[i][label_n_per_class:]
@@ -80,6 +85,6 @@ def data_partition_fix(dataset_dir, dataset_name, label_n_per_class):
         train_mask[hide_index] = False
         y_train[hide_index] = 0
 
-    return adj, features, y_train, y_val, y_test, train_mask, val_mask, test_mask, one_hot_labels
+    return adj, features, y_train, y_val, y_test, train_mask, val_mask, test_mask, labels
 
 

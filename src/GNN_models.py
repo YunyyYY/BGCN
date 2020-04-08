@@ -1,4 +1,4 @@
-'''
+"""
     Copyright (C) 2019. Huawei Technologies Co., Ltd and McGill University. All rights reserved.
     This program is free software; you can redistribute it and/or modify
     it under the terms of the MIT License.
@@ -6,7 +6,7 @@
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
     MIT License for more details.
-'''
+"""
 
 from sklearn.metrics import adjusted_rand_score
 from sklearn.metrics import accuracy_score

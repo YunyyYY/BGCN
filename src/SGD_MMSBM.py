@@ -6,7 +6,7 @@
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
     MIT License for more details.
-    """
+"""
 
 import numpy as np
 from src.utils import reparameterized_to_beta, reparameterized_to_pi, graph_preparation, metric_perp_avg, \
@@ -163,8 +163,10 @@ class MMSBM_SGMCMC:
             node_neighbors = self.node_neighbors_dict[node]
 
             links_n = len(node_neighbors)
+            if links_n > n: # if a node has too many neighbors
+                links_n = 100
             node_a[i * n:i * n + n] = node
-            node_b[i * n:i * n + links_n] = node_neighbors
+            node_b[i * n:i * n + links_n] = node_neighbors[:links_n]
             y_mini_batch[i * n:i * n + links_n] = 1
 
             # deal with non-links

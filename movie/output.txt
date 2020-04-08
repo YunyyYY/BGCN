@@ -1,0 +1,273 @@
+Dataset: movie
+Model: BGCN
+Trial index: 0
+Data partition seed: 101
+
+The training set index for class 0 is [ 3  9 11 13 14 17 19 21 22 23]
+The training set index for class 1 is [ 0  2  3  4  6  9 10 15 16 17]
+The training set index for class 2 is [ 5  8 17 18 19 20 28 36 38 40]
+The training set index for class 3 is [ 2  3  6  9 12 14 22 25 31 37]
+The training set index for class 4 is [ 5  7  8 12 17 20 33 35 50 52]
+The training set index for class 5 is [ 5 13 17 18 19 20 30 33 40 47]
+The training set index for class 6 is [ 10  19  52  63  88 107 116 186 188 223]
+The training set index for class 7 is [ 73  81  95 207 248 311 328 329 349 350]
+The training set index for class 8 is [ 0  1  8 12 26 35 44 60 65 68]
+The training set index for class 9 is [ 21  26  28  50  55  70  93 103 116 121]
+The training set index for class 10 is [19 26 28 38 40 70 76 77 92 93]
+The training set index for class 11 is [  0   1  26  35  44  79 113 148 180 200]
+The training set index for class 12 is [ 32  53  87  90  94 123 190 192 202 290]
+The training set index for class 13 is [  0   1  24  29  39  44  79  85  91 100]
+The training set index for class 14 is [ 39 118 208 262 306 307 321 322 412 413]
+The training set index for class 15 is [  0  39 140 208 307 321 322 330 334 357]
+The training set index for class 16 is [ 96 211 224 233 256 308 317 325 385 441]
+The training set index for class 17 is [ 97 183 196 420 426 427 437 497 498 536]
+
+===================================================================
+Epoch: 0010 train_loss= 5.95543 train_acc= 0.07500 time= 0.27483
+val_loss= 5.58254 val_acc= 0.03200
+===================================================================
+Epoch: 0020 train_loss= 5.86846 train_acc= 0.05000 time= 0.26950
+val_loss= 5.56216 val_acc= 0.03200
+===================================================================
+Epoch: 0030 train_loss= 5.82085 train_acc= 0.05000 time= 0.27269
+val_loss= 5.59416 val_acc= 0.03200
+===================================================================
+Epoch: 0040 train_loss= 5.93643 train_acc= 0.05000 time= 0.27713
+val_loss= 5.76262 val_acc= 0.03200
+===================================================================
+Epoch: 0050 train_loss= 6.24425 train_acc= 0.05000 time= 0.28220
+val_loss= 6.10853 val_acc= 0.03200
+===================================================================
+Epoch: 0060 train_loss= 6.70382 train_acc= 0.05000 time= 0.27376
+val_loss= 6.63965 val_acc= 0.03200
+===================================================================
+Epoch: 0070 train_loss= 7.34625 train_acc= 0.07500 time= 0.27721
+val_loss= 7.36488 val_acc= 0.03200
+===================================================================
+Epoch: 0080 train_loss= 8.14991 train_acc= 0.05000 time= 0.27915
+val_loss= 8.28879 val_acc= 0.03200
+===================================================================
+Epoch: 0090 train_loss= 9.10993 train_acc= 0.17500 time= 0.27527
+val_loss= 9.41525 val_acc= 0.03800
+===================================================================
+Epoch: 0100 train_loss= 10.30663 train_acc= 0.07500 time= 0.28103
+val_loss= 10.76445 val_acc= 0.03600
+===================================================================
+Epoch: 0110 train_loss= 11.64164 train_acc= 0.17500 time= 0.28248
+val_loss= 12.31403 val_acc= 0.28200
+===================================================================
+Epoch: 0120 train_loss= 13.20178 train_acc= 0.10000 time= 0.27730
+val_loss= 14.08979 val_acc= 0.03600
+===================================================================
+Epoch: 0130 train_loss= 14.94984 train_acc= 0.07500 time= 0.28007
+val_loss= 16.06299 val_acc= 0.28200
+===================================================================
+Epoch: 0140 train_loss= 16.89501 train_acc= 0.05000 time= 0.28502
+val_loss= 18.30028 val_acc= 0.03800
+===================================================================
+Epoch: 0150 train_loss= 19.11568 train_acc= 0.07500 time= 0.28424
+val_loss= 20.75859 val_acc= 0.28200
+===================================================================
+Epoch: 0160 train_loss= 21.39849 train_acc= 0.15000 time= 0.28257
+val_loss= 23.40956 val_acc= 0.04400
+===================================================================
+Epoch: 0170 train_loss= 23.92173 train_acc= 0.05000 time= 0.28450
+val_loss= 26.24001 val_acc= 0.28400
+===================================================================
+Epoch: 0180 train_loss= 26.60068 train_acc= 0.05000 time= 0.28112
+val_loss= 29.27497 val_acc= 0.28200
+===================================================================
+Epoch: 0190 train_loss= 29.48431 train_acc= 0.15000 time= 0.28986
+val_loss= 32.51047 val_acc= 0.28400
+===================================================================
+Epoch: 0200 train_loss= 32.54428 train_acc= 0.05000 time= 0.28927
+val_loss= 35.99760 val_acc= 0.18600
+The test set accuracy from gcn is 0.019464720194647202
+=========================start the BGCN training===================
+============================Start training the SGD-MMSBM Model========================================
+========Iteration 99=======
+The averaged perplexity on the held-out test result is 2.76005057235517
+========Iteration 199=======
+The averaged perplexity on the held-out test result is 2.6236084708754177
+========Iteration 299=======
+The averaged perplexity on the held-out test result is 2.9027603766438768
+========Iteration 399=======
+The averaged perplexity on the held-out test result is 2.9283357080504717
+========Iteration 499=======
+The averaged perplexity on the held-out test result is 2.9296029069066973
+========Iteration 599=======
+The averaged perplexity on the held-out test result is 2.903936331267745
+========Iteration 699=======
+The averaged perplexity on the held-out test result is 2.6814369642558002
+========Iteration 799=======
+The averaged perplexity on the held-out test result is 2.600940122181279
+========Iteration 899=======
+The averaged perplexity on the held-out test result is 2.620363128064999
+========Iteration 999=======
+The averaged perplexity on the held-out test result is 2.8138882584617786
+============================Start training the SGD-MMSBM Model========================================
+The ARI for the initial GCN (val set) is 0.0012475674786966721
+The acc for the initial GCN (val set) is 0.278
+========Iteration 10099=======
+The averaged perplexity on the held-out test result is 3.4693975736372877
+========Iteration 10199=======
+The averaged perplexity on the held-out test result is 3.1219805127976015
+===================================================================
+Epoch: 0210 train_loss= 34.66511 train_acc= 0.20000 time= 0.49564
+val_loss= 38.19602 val_acc= 0.28400
+===================================================================
+Epoch: 0220 train_loss= 36.47314 train_acc= 0.05000 time= 0.48913
+val_loss= 39.88692 val_acc= 0.03200
+============================Start training the SGD-MMSBM Model========================================
+The ARI for the initial GCN (val set) is 0.0
+The acc for the initial GCN (val set) is 0.032
+========Iteration 10099=======
+The averaged perplexity on the held-out test result is 3.5006245329783
+========Iteration 10199=======
+The averaged perplexity on the held-out test result is 3.2474051711838334
+===================================================================
+Epoch: 0230 train_loss= 37.60877 train_acc= 0.10000 time= 0.48597
+val_loss= 41.90144 val_acc= 0.03200
+===================================================================
+Epoch: 0240 train_loss= 39.52740 train_acc= 0.07500 time= 0.47835
+val_loss= 44.48866 val_acc= 0.03200
+============================Start training the SGD-MMSBM Model========================================
+The ARI for the initial GCN (val set) is 0.0
+The acc for the initial GCN (val set) is 0.032
+========Iteration 10099=======
+The averaged perplexity on the held-out test result is 3.403252814008035
+========Iteration 10199=======
+The averaged perplexity on the held-out test result is 3.2587680838438478
+===================================================================
+Epoch: 0250 train_loss= 42.30193 train_acc= 0.20000 time= 0.45599
+val_loss= 47.49076 val_acc= 0.04600
+===================================================================
+Epoch: 0260 train_loss= 45.72687 train_acc= 0.17500 time= 0.46007
+val_loss= 50.95893 val_acc= 0.03200
+============================Start training the SGD-MMSBM Model========================================
+The ARI for the initial GCN (val set) is 0.0
+The acc for the initial GCN (val set) is 0.032
+========Iteration 10099=======
+The averaged perplexity on the held-out test result is 3.6183710718059356
+========Iteration 10199=======
+The averaged perplexity on the held-out test result is 3.2226636927867056
+===================================================================
+Epoch: 0270 train_loss= 48.39596 train_acc= 0.17500 time= 0.51084
+val_loss= 54.50789 val_acc= 0.28400
+===================================================================
+Epoch: 0280 train_loss= 52.10103 train_acc= 0.05000 time= 0.51017
+val_loss= 58.29619 val_acc= 0.03600
+============================Start training the SGD-MMSBM Model========================================
+The ARI for the initial GCN (val set) is -0.0005118121239696707
+The acc for the initial GCN (val set) is 0.036
+========Iteration 10099=======
+The averaged perplexity on the held-out test result is 3.617313508690388
+========Iteration 10199=======
+The averaged perplexity on the held-out test result is 3.373510989607204
+===================================================================
+Epoch: 0290 train_loss= 54.94915 train_acc= 0.07500 time= 0.43820
+val_loss= 62.26709 val_acc= 0.03200
+===================================================================
+Epoch: 0300 train_loss= 58.72566 train_acc= 0.05000 time= 0.44834
+val_loss= 66.31703 val_acc= 0.03200
+==========================================================================
+========================== Final evaluation===============================
+==========================================================================
+The accuracy (test set) from the avg graph and weight samples is 0.0705596107055961
+Optimization Finished!
+
+
+
+===================================================================
+Epoch: 0010 train_loss= 5.95543 train_acc= 0.07500 time= 0.27398
+val_loss= 5.58254 val_acc= 0.03200
+===================================================================
+Epoch: 0020 train_loss= 5.86846 train_acc= 0.05000 time= 0.26949
+val_loss= 5.56216 val_acc= 0.03200
+===================================================================
+Epoch: 0030 train_loss= 5.82085 train_acc= 0.05000 time= 0.27310
+val_loss= 5.59416 val_acc= 0.03200
+===================================================================
+Epoch: 0040 train_loss= 5.93643 train_acc= 0.05000 time= 0.27386
+val_loss= 5.76262 val_acc= 0.03200
+===================================================================
+Epoch: 0050 train_loss= 6.24425 train_acc= 0.05000 time= 0.27805
+val_loss= 6.10853 val_acc= 0.03200
+===================================================================
+Epoch: 0060 train_loss= 6.70382 train_acc= 0.05000 time= 0.27112
+val_loss= 6.63965 val_acc= 0.03200
+===================================================================
+Epoch: 0070 train_loss= 7.34625 train_acc= 0.07500 time= 0.27333
+val_loss= 7.36488 val_acc= 0.03200
+===================================================================
+Epoch: 0080 train_loss= 8.14991 train_acc= 0.05000 time= 0.27598
+val_loss= 8.28879 val_acc= 0.03200
+===================================================================
+Epoch: 0090 train_loss= 9.10993 train_acc= 0.17500 time= 0.27776
+val_loss= 9.41525 val_acc= 0.03800
+===================================================================
+Epoch: 0100 train_loss= 10.30663 train_acc= 0.07500 time= 0.27758
+val_loss= 10.76445 val_acc= 0.03600
+===================================================================
+Epoch: 0110 train_loss= 11.64164 train_acc= 0.17500 time= 0.27742
+val_loss= 12.31403 val_acc= 0.28200
+===================================================================
+Epoch: 0120 train_loss= 13.20178 train_acc= 0.10000 time= 0.28077
+val_loss= 14.08979 val_acc= 0.03600
+===================================================================
+Epoch: 0130 train_loss= 14.94984 train_acc= 0.07500 time= 0.28085
+val_loss= 16.06299 val_acc= 0.28200
+===================================================================
+Epoch: 0140 train_loss= 16.89501 train_acc= 0.05000 time= 0.28504
+val_loss= 18.30028 val_acc= 0.03800
+===================================================================
+Epoch: 0150 train_loss= 19.11568 train_acc= 0.07500 time= 0.28266
+val_loss= 20.75859 val_acc= 0.28200
+===================================================================
+Epoch: 0160 train_loss= 21.39849 train_acc= 0.15000 time= 0.28282
+val_loss= 23.40956 val_acc= 0.04400
+===================================================================
+Epoch: 0170 train_loss= 23.92173 train_acc= 0.05000 time= 0.28247
+val_loss= 26.24001 val_acc= 0.28400
+===================================================================
+Epoch: 0180 train_loss= 26.60068 train_acc= 0.05000 time= 0.28212
+val_loss= 29.27497 val_acc= 0.28200
+===================================================================
+Epoch: 0190 train_loss= 29.48431 train_acc= 0.15000 time= 0.28502
+val_loss= 32.51047 val_acc= 0.28400
+===================================================================
+Epoch: 0200 train_loss= 32.54428 train_acc= 0.05000 time= 0.29145
+val_loss= 35.99760 val_acc= 0.18600
+===================================================================
+Epoch: 0210 train_loss= 35.83252 train_acc= 0.17500 time= 0.28507
+val_loss= 39.69660 val_acc= 0.28400
+===================================================================
+Epoch: 0220 train_loss= 39.32294 train_acc= 0.05000 time= 0.28514
+val_loss= 43.59452 val_acc= 0.28400
+===================================================================
+Epoch: 0230 train_loss= 42.88892 train_acc= 0.10000 time= 0.29073
+val_loss= 47.59177 val_acc= 0.04200
+===================================================================
+Epoch: 0240 train_loss= 46.66267 train_acc= 0.02500 time= 0.29018
+val_loss= 51.86813 val_acc= 0.03600
+===================================================================
+Epoch: 0250 train_loss= 50.56710 train_acc= 0.12500 time= 0.29600
+val_loss= 56.28477 val_acc= 0.28400
+===================================================================
+Epoch: 0260 train_loss= 54.71000 train_acc= 0.12500 time= 0.28825
+val_loss= 60.92474 val_acc= 0.28400
+===================================================================
+Epoch: 0270 train_loss= 59.03339 train_acc= 0.15000 time= 0.29794
+val_loss= 65.71153 val_acc= 0.28400
+===================================================================
+Epoch: 0280 train_loss= 63.47857 train_acc= 0.22500 time= 0.29350
+val_loss= 70.74286 val_acc= 0.28400
+===================================================================
+Epoch: 0290 train_loss= 68.15278 train_acc= 0.07500 time= 0.29072
+val_loss= 76.01082 val_acc= 0.03200
+===================================================================
+Epoch: 0300 train_loss= 72.96986 train_acc= 0.17500 time= 0.29686
+val_loss= 81.32258 val_acc= 0.28400
+============= test set accuracy 300==========
+The test set accuracy is 0.1897810218978102
+Optimization Finished!

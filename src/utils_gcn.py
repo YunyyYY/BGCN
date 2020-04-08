@@ -102,7 +102,7 @@ def sparse_to_tuple(sparse_mx):
 def preprocess_features(features):
     """Row-normalize feature matrix and convert to tuple representation"""
     rowsum = np.array(features.sum(1))
-    r_inv = np.power(rowsum, -1).flatten()
+    r_inv = np.power(rowsum.astype(float), -1).flatten()
     r_inv[np.isinf(r_inv)] = 0.
     r_mat_inv = sp.diags(r_inv)
     features = r_mat_inv.dot(features)
@@ -135,4 +135,36 @@ def construct_feed_dict(features, support, labels, labels_mask, placeholders):
     return feed_dict
 
 
+def load_movie(dataset_str, dataset_dir):
+    """Load data."""
+    names = ['x', 'y', 'tx', 'ty', 'allx', 'ally', 'graph']
+    objects = []
+    for i in range(len(names)):
+        with open(dataset_dir + "/ind.{}.{}".format(dataset_str, names[i]), 'rb') as f:
+            if sys.version_info > (3, 0):
+                objects.append(pkl.load(f, encoding='latin1'))
+            else:
+                objects.append(pkl.load(f))
 
+    x, y, tx, ty, allx, ally, graph = tuple(objects)
+
+    features = allx.tolil()
+    adj = nx.adjacency_matrix(nx.from_dict_of_lists(graph))
+
+    labels = ally
+
+    idx_train = range(1528)
+    idx_val = range(1528, 2028)
+    idx_test = range(2028, 2439)
+
+    train_mask = sample_mask(idx_train, labels.shape[0])
+    val_mask = sample_mask(idx_val, labels.shape[0])
+    test_mask = sample_mask(idx_test, labels.shape[0])
+
+    y_train = np.zeros(labels.shape)
+    y_val = np.zeros(labels.shape)
+    y_test = np.zeros(labels.shape)
+    y_train[train_mask, :] = labels[train_mask, :]
+    y_val[val_mask, :] = labels[val_mask, :]
+    y_test[test_mask, :] = labels[test_mask, :]
+    return adj, features, y_train, y_val, y_test, train_mask, val_mask, test_mask, labels
